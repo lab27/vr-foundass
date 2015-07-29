@@ -1,0 +1,61 @@
+// get the original globals:
+@import '../../../bower_components/foundation/scss/foundation';
+
+body {
+	background: $steel;
+}
+
+
+
+
+// THUMBNAILS!!
+#thumb-container {
+		display:flex;
+	flex-flow:row wrap;
+	background:purple;
+	padding:24px;
+	justify-content:flex-start;
+}
+
+$thumb-size: 200px;
+
+.thumbnail {
+	background:$white;
+	// padding:24px;
+	border-radius:2px;
+	box-shadow:0 1px 3px rgba(0,0,0,.1);
+	width:33.33%;
+	// max-width: 33.333vw;
+	// margin: 0 12px 12px 0;
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+
+.thumb-image {
+	background:orange;
+	width: $thumb-size;
+	height: $thumb-size;
+	margin:24px;
+}
+
+.thumb-right {
+	align-self: flex-start;
+	background: #fafafa;
+	height:$thumb-size;
+	margin: 24px 24px 0 0;
+	padding:0;
+	flex-grow: 2;
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:flex-start;
+}
+
+h1.thumb-title {
+	margin-top:0;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 700;
+}

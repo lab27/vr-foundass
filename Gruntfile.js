@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files
-          'bower_components/foundation/css/foundation.css': 'bower_components/foundation/scss/foundation.scss',       // 'destination': 'source'
+          '<%= config.src %>/assets/styles/app.css': '<%= config.src %>/assets/styles/app.scss',       // 'destination': 'source'
           // 'widgets.css': 'widgets.scss'
         }
       }
@@ -47,8 +47,8 @@ module.exports = function(grunt) {
       },
       sass: {
         files: [
-          'bower_components/foundation/scss/*.scss',
-          'bower_components/foundation/scss/foundation/components/*.scss'
+          '<%= config.src %>/assets/styles/app.scss',
+          '<%= config.src %>/assets/styles/_custom.scss'
           ],
         tasks: ['sass','copy']
       },
@@ -99,13 +99,13 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      bootstrap: {
+      foundation: {
         expand: true,
-        cwd: 'bower_components/foundation/css/',
-        src: '**',
+        cwd: '<%= config.src %>/assets/styles/',
+        src: '*.css',
         dest: '<%= config.dist %>/assets/css'
       },
-      foundation: {
+      js: {
         expand:true,
         cwd: 'bower_components/foundation/js/',
         src: '**',

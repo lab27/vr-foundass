@@ -1,18 +1,19 @@
 ---
 component: thumbnail
 ---
-
 <div class="thumbnail">
-	<div class="thumb-image left thumb{{index}}"></div>
-	<div class="thumb-right right">
-		<div class="thumb-info">
-			<h1 class="thumb-title">{{ title }}</h1>
-			<p class="thumb-meta"><span class="thumb-publisher">{{ publisher }}</span><span class="thumb-timeago">{{ time-ago }} ago</span></p>
-			<p class="thumb-logline">{{ logline }}</p>
-		</div>
-		<div class="thumb-actions">
-			<div class="thumb-duration">{{ duration }} Min</div>
-			<div class="thumb-listenlater"></div>
+	<div class="thumbnail-inside">
+		<div class="thumb-image left thumb{{index}} hide-for-small-only"></div>
+		<div class="thumb-right right">
+			<div class="thumb-info">
+				<h1 class="thumb-title">{{truncate title 57 "..."}}</h1>
+				<p class="thumb-meta">{{ publisher }}<span class="thumb-timeago">{{ time-ago }} ago</span></p>
+				<p class="thumb-logline">{{ truncate logline 120 "..." }}</p>
+			</div>
+			<div class="thumb-actions">
+				<div class="thumb-duration">{{ duration }} Min</div>
+				<div class="thumb-listenlater"></div>
+			</div>
 		</div>
 	</div>
 </div>

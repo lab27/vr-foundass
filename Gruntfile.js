@@ -113,7 +113,7 @@ module.exports = function(grunt) {
       }
       // theme: {
       //   expand: true,
-      //   cwd: 'src/assets/',
+      //   cwd: 'dist/assets/css',
       //   src: '**',
       //   dest: '<%= config.dist %>/assets/css/'
       // }

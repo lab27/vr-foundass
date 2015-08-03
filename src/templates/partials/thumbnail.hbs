@@ -3,7 +3,14 @@ component: thumbnail
 ---
 <div class="thumbnail">
 	<div class="thumbnail-inside">
-		<div class="thumb-image left thumb{{index}} hide-for-small-only"></div>
+		<div class="thumb-image-holder hide-for-small-only">
+			<div class="thumb-image" data-bg="thumb{{myNum}}"></div>
+			<div class="thumb-overlay">
+				<!-- <div class="play-icon">
+					PLAY
+			</div> -->
+			</div>
+		</div>
 		<div class="thumb-right right">
 			<div class="thumb-info">
 				<h1 class="thumb-title">{{truncate title 57 "..."}}</h1>
@@ -12,7 +19,7 @@ component: thumbnail
 			</div>
 			<div class="thumb-actions">
 				<div class="thumb-duration">{{ duration }} Min</div>
-				<div class="thumb-listenlater"></div>
+				<div class="thumb-listenlater">Listen Later</div>
 			</div>
 		</div>
 	</div>

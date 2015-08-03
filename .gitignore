@@ -19,4 +19,4 @@ bower_components
 
 *.sublime-*
 
-!bower_components/foundation
+!bower_components/foundation/*

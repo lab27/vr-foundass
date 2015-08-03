@@ -1,5 +1,6 @@
 // get the original globals:
 @import '../../../bower_components/foundation/scss/foundation';
+@import 'iconfont';
 
 html, body {
 	-webkit-font-smoothing: antialiased;
@@ -31,7 +32,7 @@ html, body {
 
 .sort-bar {
 	-webkit-flex: 1 0;
-	background:$alert-color;
+	background:$secondary-color;
 	padding:12px 24px;
 	display:-webkit-flex;
 	-webkit-flex-flow:row nowrap;
@@ -41,11 +42,11 @@ html, body {
 
 .sort-bar h5, .sort-bar h5 a {
 	margin:0;
-	color: $smoke;
+	color: $jet;
 }
 
 .sort-bar h5 a.active {
-	color:$white;
+	color:$tuatara;
 }
 
 .titlebar h3, .titlebar h5 {

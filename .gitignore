@@ -18,3 +18,5 @@ bower_components
 .sass-cache
 
 *.sublime-*
+
+!bower_components/foundation

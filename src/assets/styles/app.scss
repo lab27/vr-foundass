@@ -4,9 +4,68 @@
 html, body {
 	-webkit-font-smoothing: antialiased;
 	height:100%;
-	background:$steel;
+	background:$smoke;
 }
 
+#main {
+	width:100%;
+	height:100%;
+	display:flex;
+	display:-webkit-flex;
+	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+}
+
+// TITLEBAR 
+
+.titlebar {
+	flex:1 0;
+	background:rgba(190,194,208,.2);
+	// margin:-24px 0 0 -24px;
+	padding:24px;
+	display:flex;
+	display:-webkit-flex;
+	-webkit-justify-content:space-between;
+	-webkit-align-items:baseline;
+}
+
+.sort-bar {
+	-webkit-flex: 1 0;
+	background:$alert-color;
+	padding:12px 24px;
+	display:-webkit-flex;
+	-webkit-flex-flow:row nowrap;
+	-webkit-justify-content:flex-end;
+	-webkit-align-items:flex-end;
+}
+
+.sort-bar h5, .sort-bar h5 a {
+	margin:0;
+	color: $smoke;
+}
+
+.sort-bar h5 a.active {
+	color:$white;
+}
+
+.titlebar h3, .titlebar h5 {
+	margin:0;
+	font-weight:300;
+	color:$tuatara;
+}
+
+.titlebar h3 strong, .titlebar h5 strong {
+	color:$jet;
+	font-weight:300;
+}
+
+.titlebar h3 a, .titlebar h5 a {
+	color: $jet;
+}
+
+.titlebar h5 a.active {
+	color:$primary-color;
+}
 // THUMBNAILS!!
 
 
@@ -41,7 +100,7 @@ html, body {
 .thumbnail-inside {
 	background: $white;
 	box-shadow:0 1px 3px rgba(0,0,0,.2);
-	display:flex;
+	display:flex; display:-webkit-flex;
 	flex-flow: row nowrap;
 	justify-content: stretch;
 	align-items: stretch;
@@ -58,7 +117,7 @@ html, body {
 	min-height: 10vw;
 	margin:12px;
 	z-index:0;
-	display:flex;
+	display:flex; display:-webkit-flex;
 	flex-flow:row nowrap;
 	position:relative;
 }
@@ -67,10 +126,12 @@ html, body {
 	margin:0;
 	background:url(../img/thumbs/thumb0.jpg) no-repeat 50% 50%;
 	background-size:cover;
-	-webkit-filter: sepia(1) hue-rotate(180deg) opacity(.2); 
+	-webkit-filter: sepia(1) hue-rotate(180deg) opacity(.4); 
+	// -webkit-filter: grayscale(.5);
 	filter:sepia(1) hue-rotate(180deg) opacity(.2);
 	// filter:hue-rotate(100);
 	flex:0;
+	-webkit-flex:0;
 }
 
 .thumb-overlay {
@@ -84,10 +145,13 @@ html, body {
 	height:100%;
 	background:rgba(97,111,123,.2);
 	transition: background .5s ease;
-	display:flex;
+	display:flex; display:-webkit-flex;
 	flex-flow:row nowrap;
+	-webkit-flex-flow:row nowrap;
 	justify-content:center;
 	align-items:center;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
 }
 
 .thumb-overlay:after {
@@ -101,13 +165,18 @@ html, body {
 	border-left: 44px solid rgba(255,255,255,.8);
 }
 
+// HOVERS!
+
+.thumbnail-inside:hover {
+	box-shadow:0 2px 15px rgba(0,0,0,.2);
+}
 
 .thumbnail-inside:hover .thumb-overlay {
  	background:rgba(221,186,118,.7);
 }
 
-.thumbnail-inside:hover .thumb-title {
-	text-decoration:underline;
+.thumbnail-inside:hover .thumb-overlay:after {
+	border-left: 44px solid rgba(255,255,255,1);
 }
 
 
@@ -118,8 +187,9 @@ html, body {
 	flex: 1 1 75%;
 	margin: 12px 12px 12px 0;
 	padding:0;
-	display:flex;
+	display:flex; display:-webkit-flex;
 	flex-flow:column nowrap;
+	-webkit-flex-flow:column nowrap;
 	justify-content:space-between;
 	align-items: flex-start;
 }
@@ -140,20 +210,24 @@ h1.thumb-title {
 
 .thumb-actions {
 	flex:0 0 42px;
+	-webkit-flex:0 0 42px;
 	align-self: flex-end;
 	color:$iron;
 	background: none;
 	padding: 0;
-	display:flex;
+	display:flex; display:-webkit-flex;
 	align-items: center;
+	-webkit-align-items: center;
 	width:100%;
 }
 
 .thumb-listenlater, .thumb-duration {
 	height:42px;
-	display:flex;
+	display:flex; display:-webkit-flex;
 	justify-content:center;
 	align-items:center;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
 	margin-left: 6px;
 	background:$snow;
 	margin:0;
@@ -179,6 +253,12 @@ p.thumb-meta {
 	margin-bottom:8px;
 }
 
+.thumb-publisher:hover {
+	text-decoration:underline;
+}
+
+
+
 .thumb-timeago {
 	color: $charcoal;
 	margin-left: 12px;
@@ -199,6 +279,7 @@ p.thumb-logline {
 
 .thumb-info {
 	flex: 1 1 calc(10vw - 42px);
+	-webkit-flex: 1 1 calc(10vw - 42px);
 	overflow-y:hidden;
 }
 
@@ -235,7 +316,7 @@ p.thumb-logline {
 
 }
 
-@media only screen and {min-width: 768px} { 
+@media  #{$large-up} { 
 	
 	
 	.thumbnail {
@@ -258,29 +339,53 @@ p.thumb-logline {
 
 }
 
+// IPAD 
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.thumbnail {
+		width:50%;
+	}
+
+
+	.thumb-image-holder, .thumb-image {
+		width: 15vw;
+		height: 15vw;
+		min-width:15vw;
+		min-height: 15vw;
+	}
+
+
+}
+
 @media #{$xlarge-up} { 
 	.thumbnail {
 		width:33.33%;
 	}
 
-	.thumb-image-holder, .thumb-image {
-		width: calc(100% - (100vw/1920));
-		height: calc(100% - (100vw/1920px));
-		min-width:calc(100% - (100vw/1920px));
-		min-height: calc(100% - (100vw/1920px));
-	} 
-
-
 	// .thumb-image-holder, .thumb-image {
-	// 	width: 210px;
-	// 	height: 210px;
-	// 	min-width:210px;
-	// 	min-height: 210px;
+	// 	width: calc(100% - (100vw/1920));
+	// 	height: calc(100% - (100vw/1920px));
+	// 	min-width:calc(100% - (100vw/1920px));
+	// 	min-height: calc(100% - (100vw/1920px));
 	// } 
+
+
+	.thumb-image-holder, .thumb-image {
+		width: 210px;
+		height: 210px;
+		min-width:210px;
+		min-height: 210px;
+	} 
 
 	.thumb-info {
 	flex: 1 1 calc(210px - 42px);
-	overflow-y:hidden;
+	-webkit-flex: 1 1 calc(210px - 42px);
+	overflow:hidden;
 }
 
 }

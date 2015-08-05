@@ -11783,7 +11783,7 @@ p.thumb-logline {
 
 .publisher-image {
   -webkit-filter: opacity(0.2);
-  transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s ease;
 }
 
 .publisher-tile:hover .publisher-image {

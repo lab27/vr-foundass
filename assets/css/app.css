@@ -6049,12 +6049,12 @@ meta.foundation-mq-topbar {
   background: #f2f2f2;
 }
 .top-bar-section ul li.active > a {
-  background: #1677CB;
-  color: #f2f2f2;
+  background: #FFFFFF;
+  color: #1677CB;
 }
 .top-bar-section ul li.active > a:hover {
-  background: #1366af;
-  color: #000000;
+  background: #f2f2f2;
+  color: #1677CB;
 }
 .top-bar-section .has-form {
   padding: 1.66667rem;
@@ -6223,14 +6223,14 @@ meta.foundation-mq-topbar {
     background: #f2f2f2;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button) {
-    background: #1677CB;
-    color: #f2f2f2;
+    background: #FFFFFF;
+    color: #1677CB;
     line-height: 5rem;
     padding: 0 1.66667rem;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-    background: #1366af;
-    color: #000000;
+    background: #f2f2f2;
+    color: #1677CB;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 2.91667rem !important;
@@ -6346,8 +6346,8 @@ meta.foundation-mq-topbar {
     color: #000000;
   }
   .no-js .top-bar-section ul li:active > a {
-    background: #1677CB;
-    color: #f2f2f2;
+    background: #FFFFFF;
+    color: #1677CB;
   }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     position: static !important;
@@ -11380,10 +11380,39 @@ html, body {
   -webkit-flex-flow: column nowrap;
 }
 
+.top-bar-section li:not(.has-form) a:not(.button) {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.avatar {
+  height: 100%;
+  padding: 12px 0;
+}
+
+.avatar-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  border: 2px solid #EEEEEE;
+  background: url(../img/lips.png) no-repeat 50% 50%;
+  background-size: cover;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.top-bar-section .has-dropdown > a:after {
+  border-color: #6A6F7B transparent transparent transparent;
+}
+
+.top-bar-section li a {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .titlebar {
   flex: 1 0;
-  background: rgba(190, 194, 208, 0.2);
-  padding: 24px;
+  background: #EEEEEE;
+  padding: 12px;
   display: flex;
   display: -webkit-flex;
   -webkit-justify-content: space-between;
@@ -11392,21 +11421,38 @@ html, body {
 
 .sort-bar {
   -webkit-flex: 1 0;
-  background: #DDBA76;
-  padding: 12px 24px;
+  background: rgba(68, 74, 89, 0.1);
+  padding: 12px;
   display: -webkit-flex;
   -webkit-flex-flow: row nowrap;
-  -webkit-justify-content: flex-end;
-  -webkit-align-items: flex-end;
+  -webkit-justify-content: center;
+  -webkit-align-items: baseline;
 }
 
 .sort-bar h5, .sort-bar h5 a {
   margin: 0;
-  color: #444A59;
+  color: #FFFFFF;
 }
 
 .sort-bar h5 a.active {
   color: #8F939C;
+}
+
+.sort-bar .button {
+  margin: 0;
+  background: rgba(68, 74, 89, 0.1);
+}
+
+.sort-bar .button:hover {
+  background: rgba(68, 74, 89, 0.2);
+}
+
+.sort-bar .button.selected {
+  background: #DDBA76;
+}
+
+h6.sort-by {
+  margin: 0;
 }
 
 .titlebar h3, .titlebar h5 {
@@ -11524,12 +11570,35 @@ html, body {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
-.thumbnail-inside:hover .thumb-overlay {
+.thumb-image-holder:hover .thumb-overlay {
   background: rgba(221, 186, 118, 0.7);
 }
 
 .thumbnail-inside:hover .thumb-overlay:after {
   border-left: 44px solid white;
+}
+
+.thumb-title:hover {
+  text-decoration: underline;
+}
+
+.thumb-listenlater:after {
+  content: 'listen later';
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-left: -66px;
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+.thumb-listenlater:hover {
+  background: #1677CB;
+  color: #fff;
+}
+
+.thumb-listenlater:hover:after {
+  margin-left: 10px;
+  opacity: 1;
 }
 
 .thumb-right {
@@ -11586,16 +11655,17 @@ h1.thumb-title {
   margin: 0;
   padding: 0 12px;
   transition: background .5s ease;
+  transition: width .5s ease;
+}
+
+.thumb-listenlater.selected {
+  background: #1677CB;
+  color: #FFFFFF;
 }
 
 .thumb-duration {
   margin-right: 6px;
   background: #fafafa;
-}
-
-.thumb-listenlater:hover {
-  background: #1677CB;
-  color: #fff;
 }
 
 p.thumb-meta {
@@ -11640,6 +11710,14 @@ p.thumb-logline {
 
   .thumbnail-inside {
     padding: 0;
+  }
+
+  .sort-bar {
+    padding: 24px 24px;
+  }
+
+  .titlebar {
+    padding: 24px;
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {

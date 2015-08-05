@@ -4,6 +4,18 @@ $('.thumb-image').each(function(){
 	$(this).css('background-image','url(' + myBG + ')')
 });
 
+$('.topic-inside').each(function(){
+	var myBG = 'assets/img/topics/'+$(this).data('bg')+'.jpg';
+	console.log('myBG: ' + myBG);
+	$(this).css('background-image','url(' + myBG + ')')
+});
+
+$('.publisher-image').each(function(){
+	var myBG = 'assets/img/publishers/'+$(this).data('bg')+'.png';
+	console.log('myBG: ' + myBG);
+	$(this).css('background-image','url(' + myBG + ')')
+});
+
 
 var imageWidth = "test";
 
@@ -23,8 +35,8 @@ $('.thumb-listenlater').on('click',function(){
 	$(this).toggleClass('selected')
 });
 
-$('.sort-bar .button').on('click',function(){
-	$('.sort-bar .button').each(function(){
+$('.sortby .button').on('click',function(){
+	$('.sortby .button').each(function(){
 		$(this).removeClass('selected')
 	});
 	$(this).addClass('selected')

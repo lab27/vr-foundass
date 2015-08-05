@@ -17,3 +17,15 @@ $(window).on('resize', function(){
       $('#image-width').html(imageWidth)
  
 });
+
+$('.thumb-listenlater').on('click',function(){
+	$('.thumb-listenlater:after').css('color','#ff0000')
+	$(this).toggleClass('selected')
+});
+
+$('.sort-bar .button').on('click',function(){
+	$('.sort-bar .button').each(function(){
+		$(this).removeClass('selected')
+	});
+	$(this).addClass('selected')
+});

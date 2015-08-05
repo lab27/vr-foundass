@@ -8,10 +8,32 @@ title: Home
 <div class="titlebar">
 	<div class="title-left left"><h3 class="breadcrumb"><a href="#">Explore </a> / <span class="current-branch">Politics</span></h3></div>
 
-	<div class="title-middle"><h3 class="results"><strong>473</strong> Results</h3></div>
+	<div class="title-middle"><h3 class="results show-for-small-only">(473)</h3><h3 class="results show-for-medium-up">473 Results</h3></div>
 </div>
 
-<div class="sort-bar"><h5 class="sort-by">Sort by: <a href="#" class="active">Date</a> / <a href="#">Title</a> / <a href="#">Popularity</a> / <a href="#">Duration</a></h5></div>
+<div class="sort-bar">
+	<h6 class="sort-by">
+		{{!-- <span class="hide-for-small">Sort by: </span> --}}
+{{!-- 		<a href="#" class="active"><button class="button small">Date</button></a>
+		<a href="#"><button class="button small">Title</button></a>
+		<a href="#"><button class="button small">Popularity</button></a>
+		<a href="#"><button class="button small">Duration</button></a> --}}
+		<ul class="button-group round show-for-medium-up">
+  <li><a href="#" class="button small selected">Date</a></li>
+  <li><a href="#" class="button small">Title</a></li>
+  <li><a href="#" class="button small">Popularity</a></li>
+  <li><a href="#" class="button small">Duration</a></li>
+</ul>
+
+
+		<ul class="button-group round show-for-small-only">
+  <li><a href="#" class="button tiny selected">Date</a></li>
+  <li><a href="#" class="button tiny">Title</a></li>
+  <li><a href="#" class="button tiny">Popularity</a></li>
+  <li><a href="#" class="button tiny">Duration</a></li>
+</ul>
+	</h6>
+</div>
 
 <div id="thumb-container">
 

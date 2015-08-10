@@ -1,3 +1,9 @@
+if (Modernizr.touch) { 
+    $('html').addClass('touch');
+} else { 
+    $('html').addClass('no-touch');
+}
+
 $('.thumb-image').each(function(){
 	var myBG = 'assets/img/thumbs/'+$(this).data('bg')+'.jpg';
 	console.log('myBG: ' + myBG);

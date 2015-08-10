@@ -244,22 +244,28 @@ html, body {
 	text-decoration:underline;
 }
 
-.thumb-listenlater:after {
+.no-touch .thumb-listenlater:after {
 	content:'listen later';
 	text-transform: uppercase;
 	font-size:rem-calc(12);
-	margin-left:-66px;
+	// margin-left:-66px;
 	opacity:0;
+	color:$white;
+	background:$primary-color;
+	padding:3px 6px;
+	margin-left:-48px;
+	margin-top:-34px;
 	transition:all .2s ease;
+	position:absolute;
 }
 
-.thumb-listenlater:hover {
+.no-touch .thumb-listenlater:hover {
 	background:$primary-color;
 	color:#fff;
 }
 
 .thumb-listenlater:hover:after {
-	margin-left:10px;
+	
 	opacity:1;
 }
 

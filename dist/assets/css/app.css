@@ -11589,22 +11589,26 @@ html, body {
   text-decoration: underline;
 }
 
-.thumb-listenlater:after {
+.no-touch .thumb-listenlater:after {
   content: 'listen later';
   text-transform: uppercase;
   font-size: 0.75rem;
-  margin-left: -66px;
   opacity: 0;
+  color: #FFFFFF;
+  background: #1677CB;
+  padding: 3px 6px;
+  margin-left: -48px;
+  margin-top: -34px;
   transition: all .2s ease;
+  position: absolute;
 }
 
-.thumb-listenlater:hover {
+.no-touch .thumb-listenlater:hover {
   background: #1677CB;
   color: #fff;
 }
 
 .thumb-listenlater:hover:after {
-  margin-left: 10px;
   opacity: 1;
 }
 

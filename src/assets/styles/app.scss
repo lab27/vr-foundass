@@ -303,7 +303,7 @@ h1.thumb-title {
 	width:100%;
 }
 
-.thumb-listenlater, .thumb-duration {
+.thumb-listenlater, .thumb-duration, .thumb-plays {
 	height:42px;
 	display:flex; display:-webkit-flex;
 	justify-content:center;
@@ -323,7 +323,7 @@ h1.thumb-title {
 	color:$white;
 }
 
-.thumb-duration {
+.thumb-duration, .thumb-plays {
 	margin-right:6px;
 	background:#fafafa;
 }
@@ -711,6 +711,11 @@ p.thumb-logline {
 
 	p.thumb-meta {
 		margin-bottom: 14px;
+	}
+
+	h1.thumb-title {
+		font-size: 1.4rem;
+		line-height: 22px;
 	}
 }
 @media #{$xxlarge-only} { }

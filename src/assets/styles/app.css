@@ -11693,7 +11693,7 @@ p.thumb-meta {
 }
 
 p.thumb-logline {
-  font-family: 'Adobe Caslon Pro', helvetica;
+  font-family: 'adobe-caslon-pro', times, serif;
   color: #8F939C;
   font-size: 0.875rem;
   line-height: 1.125rem;

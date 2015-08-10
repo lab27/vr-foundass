@@ -1,41 +1,27 @@
 ---
-title: Voice Republic
-layout: src/templates/layouts/home.hbs
+title: Explore
 ---
 
-<div id="signup">
-<div class="vr-logotype"></div>
-<h2>Tune in to quality spoken content.</h2>
+<section class="topics">
+	<div class="topics-holder">
+	<div class="section-title"><h2>Browse Topics</h2>
+	{{!-- <h5>Browse Talks by these Voice Republic Topics.</h5> --}}
+	</div>
+		{{#each topics}}
+		{{>topic}}
+		{{/each}}
+	</div>
+</section>
 
-<div class="sign-up"><form>
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Email
-        <input type="text" placeholder="test@email.com" />
-      </label>
-    </div>
-  </div>
-    <div class="row">
-    <div class="large-6 columns">
-      <label>Password
-        <input type="text" placeholder="password" />
-      </label>
-      <a href="/results.html" class="button primary">Sign In</a>
-    </div>
-  </div>
 
-</form></div>
-	
-</div>
+<section class="publishers">
+	<div class="publishers-holder">
+	<div class="section-title"><h2>Browse Publishers</h2></div>
+		{{#each publisher}}
+		{{>publisher}}
+		{{/each}}
+	</div>
 
-<div id="start-listening">
-<h1 class="text-center"><a href="explore.html">Start Listening</a></h1>
+<button class="button secondary">See All Publishers <span class="icon-uniE7CD"> </span></button>
 
-<div id="thumb-container">
-
-	{{#each thumbs }}
-	{{> thumbnail}}
-	{{/each}}
-</div>
-
-</div>
+</section>

@@ -1,5 +1,6 @@
 // get the original globals:
 @import '../../../bower_components/foundation/scss/foundation';
+@import '../../../bower_components/animate.css/animate';
 @import 'iconfont';
 
 html, body {
@@ -124,7 +125,16 @@ html, body {
 	color:$primary-color;
 }
 
+//FOOTER
 
+footer {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:84px;
+	background:$oil;
+	color:$ghost;
+}
 
 
 // THUMBNAILS!!
@@ -376,6 +386,7 @@ p.thumb-logline {
 
 .publishers {
 	background:$white;
+	padding-bottom:84px;
 }
 
 .topics-holder, .publishers-holder {
@@ -421,6 +432,20 @@ p.thumb-logline {
 
 .publisher-inside {
 	padding:48px;
+	display:flex;
+
+}
+
+.publisher-classification {
+	flex:0 0 100px;
+	background: $ghost;
+	color:$charcoal;
+	// position:absolute;
+	padding: 3px 6px;
+	border-radius:2px;
+	align-self:center;
+	width:auto;
+	text-align:center;
 }
 
 
@@ -493,7 +518,7 @@ p.thumb-logline {
 // }
 
 .topic-tile:hover .topic-image {
-	-webkit-filter:sepia(0) hue-rotate(-180deg) opacity(.4);
+	-webkit-filter:sepia(.2) hue-rotate(0) opacity(.4);
 }
 
 @media #{$small-up} { }

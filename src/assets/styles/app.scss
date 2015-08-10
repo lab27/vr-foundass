@@ -254,6 +254,10 @@ footer {
 	text-decoration:underline;
 }
 
+.no-touch .thumb-listenlater {
+	transition:background-color .5s ease;
+}
+
 .no-touch .thumb-listenlater:after {
 	content:'listen later';
 	text-transform: uppercase;
@@ -270,7 +274,7 @@ footer {
 }
 
 .no-touch .thumb-listenlater:hover {
-	background:$primary-color;
+	background-color:$primary-color;
 	color:#fff;
 }
 
@@ -330,7 +334,7 @@ h1.thumb-title {
 	background:$snow;
 	margin:0;
 	padding:0 12px;
-	transition:background .5s ease;
+	transition:background-color .5s ease;
 	transition:width .5s ease;
 }
 

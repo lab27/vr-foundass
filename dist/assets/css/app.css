@@ -14432,6 +14432,10 @@ footer {
   text-decoration: underline;
 }
 
+.no-touch .thumb-listenlater {
+  transition: background-color .5s ease;
+}
+
 .no-touch .thumb-listenlater:after {
   content: 'listen later';
   text-transform: uppercase;
@@ -14447,7 +14451,7 @@ footer {
 }
 
 .no-touch .thumb-listenlater:hover {
-  background: #1677CB;
+  background-color: #1677CB;
   color: #fff;
 }
 
@@ -14508,7 +14512,7 @@ h1.thumb-title {
   background: #f2f2f2;
   margin: 0;
   padding: 0 12px;
-  transition: background .5s ease;
+  transition: background-color .5s ease;
   transition: width .5s ease;
 }
 

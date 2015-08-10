@@ -10,7 +10,7 @@ $('.thumb-image').each(function(){
 	$(this).css('background-image','url(' + myBG + ')')
 });
 
-$('.topic-inside').each(function(){
+$('.topic-image').each(function(){
 	var myBG = 'assets/img/topics/'+$(this).data('bg')+'.jpg';
 	console.log('myBG: ' + myBG);
 	$(this).css('background-image','url(' + myBG + ')')
